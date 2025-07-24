@@ -1,0 +1,27 @@
+.name-button {
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    font-style: oblique;
+    color: black !important;
+  }
+  
+  .home-button,
+  .Projects-button,
+  .About-button,
+  .Contact-button {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    font-style: oblique;
+    color: black !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .home-button:focus,
+  .Projects-button:focus,
+  .About-button:focus,
+  .Contact-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
