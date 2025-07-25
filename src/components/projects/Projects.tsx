@@ -1,9 +1,6 @@
 import React from "react";
 import { Box, Typography, Divider } from "@mui/material";
 import { motion } from "framer-motion";
-// import DESIGN from "../../assets/136378-200 1.svg";
-// import DEVELOPMENT from "../../assets/img_533288 1.svg";
-// import maintenance from "../../assets/maintenance--v3 1.svg";
 import NextProjectImg1 from "../../assets/next-project-img1.png";
 import NextProjectImg2 from "../../assets/next-project-img2.png";
 import ChatApplication1 from "../../assets/WhatsApp Image 2025-03-08 at 10.47.58 PM.jpeg";
@@ -219,32 +216,35 @@ const Projects: React.FC = () => {
       animate="visible"
       custom={index}
     >
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: {
-            xs: "column",
-            md: index % 2 === 0 ? "row" : "row-reverse",
-          },
-          alignItems: "center",
-          backgroundColor: "white",
-          borderRadius: "16px",
-          overflow: "hidden",
-          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
-        }}
-      >
-        {/* Image */}
-      <Box
+    <Box
   sx={{
-    flex: 1,
-    minWidth: "280px",
-    maxHeight: { xs: "none", sm: "250px" }, // allow taller height on mobile
+    display: "flex",
+    flexDirection: {
+      xs: "column",
+      md: index % 2 === 0 ? "row" : "row-reverse",
+    },
+    alignItems: "stretch",
+    flexWrap: "wrap",
+    backgroundColor: "white",
+    borderRadius: "16px",
     overflow: "hidden",
-    borderRadius: "12px",
+    boxShadow: "0 8px 24px rgba(0, 0, 0, 0.08)",
+  }}
+>
+
+        {/* Image */}
+<Box
+  sx={{
+    width: { xs: "100%", md: "35%" },
+    minWidth: { xs: "100%", md: "300px" },
+    maxWidth: { md: "350px" },
+    height: { xs: "250px", sm: "300px", md: "100%" }, // increased height
+    overflow: "hidden",
+    // borderRadius: "70px",
+    flexShrink: 0,
   }}
 >
   <Slider
-    dots={true}
     infinite={true}
     speed={500}
     slidesToShow={1}
@@ -260,14 +260,16 @@ const Projects: React.FC = () => {
         alt={`${project.title} - ${imgIndex}`}
         sx={{
           width: "100%",
-          height: { xs: "auto", sm: "250px" }, // auto height for mobile
-          objectFit: "inherit",
+          height: "250px",
+          objectFit: "scale-down",
           display: "block",
+          borderRadius:"20px"
         }}
       />
     ))}
   </Slider>
 </Box>
+
 
 
 

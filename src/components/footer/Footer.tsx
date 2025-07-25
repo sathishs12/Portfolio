@@ -80,30 +80,67 @@ const Footer: React.FC<FooterProps> = ({
       </Box>
 
       {/* Social Icons */}
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "6px",
-          mb: 3,
-          "& > *": {
-            mx: 1
-          }
-        }}
-      >
-        <IconButton color="inherit" aria-label="facebook" size="small" sx={{ border: "1px solid rgba(255,255,255,0.3)" }}>
-          <FacebookIcon fontSize="small" />
-        </IconButton>
-        <IconButton color="inherit" aria-label="linkedin" size="small" sx={{ border: "1px solid rgba(255,255,255,0.3)" }}>
-          <LinkedInIcon fontSize="small" />
-        </IconButton>
-        <IconButton color="inherit" aria-label="instagram" size="small" sx={{ border: "1px solid rgba(255,255,255,0.3)" }}>
-          <InstagramIcon fontSize="small" />
-        </IconButton>
-        <IconButton color="inherit" aria-label="email" size="small" sx={{ border: "1px solid rgba(255,255,255,0.3)" }}>
-          <EmailIcon fontSize="small" />
-        </IconButton>
-      </Box>
+     <Box
+  sx={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "6px",
+    mb: 3,
+    "& > *": {
+      mx: 1
+    }
+  }}
+>
+  <IconButton
+    component="a"
+    href="https://www.facebook.com/your-profile"
+    target="_blank"
+    rel="noopener"
+    color="inherit"
+    aria-label="facebook"
+    size="small"
+    sx={{ border: "1px solid rgba(255,255,255,0.3)" }}
+  >
+    <FacebookIcon fontSize="small" />
+  </IconButton>
+
+  <IconButton
+    component="a"
+    href="https://www.linkedin.com/in/benjamin-sathish-s-7b1274246/"
+    target="_blank"
+    rel="noopener"
+    color="inherit"
+    aria-label="linkedin"
+    size="small"
+    sx={{ border: "1px solid rgba(255,255,255,0.3)" }}
+  >
+    <LinkedInIcon fontSize="small" />
+  </IconButton>
+
+  <IconButton
+    component="a"
+    href="https://www.instagram.com/your-profile"
+    target="_blank"
+    rel="noopener"
+    color="inherit"
+    aria-label="instagram"
+    size="small"
+    sx={{ border: "1px solid rgba(255,255,255,0.3)" }}
+  >
+    <InstagramIcon fontSize="small" />
+  </IconButton>
+
+  <IconButton
+    component="a"
+    href="mailto:sathish638236@gmail.com"
+    color="inherit"
+    aria-label="email"
+    size="small"
+    sx={{ border: "1px solid rgba(255,255,255,0.3)" }}
+  >
+    <EmailIcon fontSize="small" />
+  </IconButton>
+</Box>
 
       {/* Copyright */}
       <Typography 

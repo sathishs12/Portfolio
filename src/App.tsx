@@ -691,6 +691,15 @@ import Contact from "./components/contact/contact";
 import AboutMeSection from "./components/about/AboutMeSection";
 import LOGO from "./assets/logo_white-removebg-preview.png";
 import Footer from "./components/footer/Footer";
+import SpeedDial from "@mui/material/SpeedDial";
+import SpeedDialAction from "@mui/material/SpeedDialAction";
+import SpeedDialIcon from "@mui/material/SpeedDialIcon";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import WorkIcon from "@mui/icons-material/Work";
+import ContactMailIcon from "@mui/icons-material/ContactMail";
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
 
 const ScrollToSection = () => {
   const location = useLocation();
@@ -849,6 +858,84 @@ const AppContent = () => {
           <Contact />
         </div>
       </Box>
+{!showAppBar && (
+<SpeedDial
+  ariaLabel="Navigation Speed Dial"
+  sx={{
+    position: 'fixed',
+    bottom: 16,
+    right: 16,
+    '& .MuiFab-primary': {
+      backgroundColor: '#000',
+      color: '#fff',
+      '&:hover': {
+        backgroundColor: '#333',
+      },
+    },
+  }}
+  icon={<SpeedDialIcon />}
+>
+  {/* 🆕 Back to Top Action */}
+  <SpeedDialAction
+    icon={<KeyboardArrowUpIcon sx={{ color: '#000' }} />}
+    tooltipTitle="Back to Top"
+    sx={{
+      backgroundColor: '#fff',
+      '&:hover': {
+        backgroundColor: '#eee',
+      },
+    }}
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  />
+
+  <SpeedDialAction
+    icon={<HomeIcon sx={{ color: '#000' }} />}
+    tooltipTitle="Home"
+    sx={{
+      backgroundColor: '#fff',
+      '&:hover': { backgroundColor: '#eee' },
+    }}
+    onClick={() =>
+      document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })
+    }
+  />
+  <SpeedDialAction
+    icon={<WorkIcon sx={{ color: '#000' }} />}
+    tooltipTitle="Projects"
+    sx={{
+      backgroundColor: '#fff',
+      '&:hover': { backgroundColor: '#eee' },
+    }}
+    onClick={() =>
+      document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
+    }
+  />
+  <SpeedDialAction
+    icon={<InfoIcon sx={{ color: '#000' }} />}
+    tooltipTitle="About Me"
+    sx={{
+      backgroundColor: '#fff',
+      '&:hover': { backgroundColor: '#eee' },
+    }}
+    onClick={() =>
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })
+    }
+  />
+  <SpeedDialAction
+    icon={<ContactMailIcon sx={{ color: '#000' }} />}
+    tooltipTitle="Contact"
+    sx={{
+      backgroundColor: '#fff',
+      '&:hover': { backgroundColor: '#eee' },
+    }}
+    onClick={() =>
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+    }
+  />
+</SpeedDial>
+
+
+)}
 
       <Footer />
     </Router>

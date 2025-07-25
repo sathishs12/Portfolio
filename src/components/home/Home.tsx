@@ -243,13 +243,20 @@
 // export default Home;
 
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Box, Typography, Divider, Button } from "@mui/material";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+// import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import personOne from "../../assets/WhatsApp Image 2025-07-23 at 2.47.59 PM.jpeg";
+import personTwo from "../../assets/Sathish-image.jpeg";
+import gitIcon from "../../assets/github symbol.svg";
+import emailIcon from "../../assets/Vector (2).svg";
+import linkedinIcon from "../../assets/linkedin symbol.svg";
+import DownloadIcon from '@mui/icons-material/Download';
 
 const Home: React.FC = () => {
+
+  const [isHovered, setIsHovered] = useState(false); 
   return (
     <Box
       sx={{
@@ -261,40 +268,47 @@ const Home: React.FC = () => {
       }}
     >
       {/* Download Button */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+     
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <Box textAlign="center" mb={4}>
+    <Button
+      variant="outlined"
+      sx={{
+        color: "#000",
+        borderColor: "#000",
+        borderRadius: "999px",
+        px: 4,
+        py: 1,
+        fontWeight: 600,
+        fontSize: "1rem",
+        transition: "all 0.3s ease",
+        "&:hover": {
+          backgroundColor: "#000",
+          color: "#fff",
+          borderColor: "#000",
+        },
+      }}
+      startIcon={<DownloadIcon />}
+    >
+      <a
+        href="\sathishresume-1.pdf"
+        download
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+          display: "flex",
+          alignItems: "center",
+        }}
       >
-        <Box textAlign="center" mb={4}>
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#000", // Text color (initial)
-              borderColor: "#000", // Border color (initial)
-              borderRadius: "999px",
-              px: 4,
-              py: 1,
-              fontWeight: 600,
-              fontSize: "1rem",
-              transition: "all 0.3s ease",
-              "&:hover": {
-                backgroundColor: "#000",
-                color: "#fff", // Text turns white on hover
-                borderColor: "#000", // Keeps border black
-              },
-            }}
-          >
-            <a
-              href="\src\assets\sathishresume-1.pdf"
-              download
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              Download Resume
-            </a>
-          </Button>
-        </Box>
-      </motion.div>
+        Download CV
+      </a>
+    </Button>
+  </Box>
+</motion.div>
 
 
       {/* Main Section */}
@@ -344,13 +358,13 @@ const Home: React.FC = () => {
     </Typography>
     <Box display="flex" gap={3} flexWrap="wrap">
       <a href="https://www.linkedin.com/in/benjamin-sathish-s-7b1274246/" target="_blank" rel="noreferrer" style={{ fontSize: "1.8rem", color: "#0e76a8" }}>
-        <FaLinkedin />
+        {/* <FaLinkedin /> */}<img src={linkedinIcon}></img>
       </a>
       <a href="mailto:sathish638236@gmail.com" style={{ fontSize: "1.8rem", color: "#d93025" }}>
-        <FaEnvelope />
+        {/* <FaEnvelope /> */}<img src={emailIcon}></img>
       </a>
       <a href="https://github.com/sathishs12/Chat-Application" target="_blank" rel="noreferrer" style={{ fontSize: "1.8rem", color: "#171515" }}>
-        <FaGithub />
+        {/* <FaGithub /> */}<img src={gitIcon}></img>
       </a>
     </Box>
   </Box>
@@ -359,26 +373,29 @@ const Home: React.FC = () => {
 
         {/* Image Section */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true, amount: 0.3 }}
-          style={{ flex: 1, textAlign: "center" }}
-        >
-          <motion.img
-            src={personOne}
-            alt="Sathish Benjamin"
-            style={{
-              width: "100%",
-              maxWidth: "350px",  // Smaller width
-              height: "auto",
-              borderRadius: "16px",
-              boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-            }}
-            whileHover={{ scale: 1.03, rotate: 1 }}
-            transition={{ type: "spring", stiffness: 200 }}
-          />
-        </motion.div>
+      initial={{ opacity: 0, x: 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, amount: 0.3 }}
+      style={{ flex: 1, textAlign: "center" }}
+    >
+      <motion.img
+        src={isHovered ? personTwo : personOne} // 👈 Toggle between images
+        alt="Sathish Benjamin"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        style={{
+          width: "100%",
+          maxWidth: "350px",
+          height: "auto",
+          borderRadius: "16px",
+          boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+          transition: "0.3s ease",
+        }}
+        whileHover={{ scale: 1.03, rotate: 1 }}
+        transition={{ type: "spring", stiffness: 200 }}
+      />
+    </motion.div>
 
       </Box>
 

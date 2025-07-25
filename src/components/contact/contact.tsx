@@ -718,10 +718,10 @@ const Contact: React.FC = () => {
       {/* Contact Info */}
       <motion.div initial="hidden" whileInView="visible" exit="hidden" viewport={{ once: false, amount: 0.2 }} variants={fadeInUp} custom={2}>
         <Typography sx={{ fontWeight: "bold", mb: 0.5, color: "#111" }}>
-          📧 Email: <Link href="mailto:sathish.dev@gmail.com" underline="hover">sathish.dev@gmail.com</Link>
+          📧 Email: <Link href="mailto:sathish.dev@gmail.com" underline="hover">sathish638236@gmail.com</Link>
         </Typography>
         <Typography sx={{ fontWeight: "bold", mb: 2, color: "#111" }}>
-          📞 Phone: <Link href="tel:+919876543210" underline="hover">+91 98765 43210</Link>
+          📞 Phone: <Link href="tel:+919876543210" underline="hover">+91 6369425814</Link>
         </Typography>
       </motion.div>
 

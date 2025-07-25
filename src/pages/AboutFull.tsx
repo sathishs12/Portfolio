@@ -180,7 +180,7 @@ const AboutFull = () => {
         </Section>
 
         <Section title="Address" icon={<PlaceIcon />}>
-          <Typography>Muthur,Tirupur, Tamil Nadu, India (636105)</Typography>
+          <Typography>Muthur,Tirupur, Tamil Nadu, India (638105)</Typography>
         </Section>
 
         <Section title="GitHub Contributions" icon={<GitHubIcon />}>
