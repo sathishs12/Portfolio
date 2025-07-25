@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Typography, Divider } from "@mui/material";
 import { motion } from "framer-motion";
-import DESIGN from "../../assets/136378-200 1.svg";
-import DEVELOPMENT from "../../assets/img_533288 1.svg";
-import maintenance from "../../assets/maintenance--v3 1.svg";
+// import DESIGN from "../../assets/136378-200 1.svg";
+// import DEVELOPMENT from "../../assets/img_533288 1.svg";
+// import maintenance from "../../assets/maintenance--v3 1.svg";
 import NextProjectImg1 from "../../assets/next-project-img1.png";
 import NextProjectImg2 from "../../assets/next-project-img2.png";
 import ChatApplication1 from "../../assets/WhatsApp Image 2025-03-08 at 10.47.58 PM.jpeg";

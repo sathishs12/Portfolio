@@ -1,7 +1,7 @@
 // components/CustomTimeline.tsx
 
 import React from "react";
-import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const projectData = [
   {
@@ -27,8 +27,8 @@ const projectData = [
 ];
 
 const CustomTimeline: React.FC = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+//   const theme = useTheme();
+//   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <Box

@@ -641,7 +641,6 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const ChevronDivider: React.FC = () => (
   <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", my: 4 }}>

@@ -3,7 +3,6 @@ import {
   Box,
   Typography,
   Divider,
-  Button,
   Paper,
   Stack,
   useTheme,
@@ -12,14 +11,14 @@ import {
   InputLabel,
   FormControl,
 } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import CodeIcon from "@mui/icons-material/Code";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 import PlaceIcon from "@mui/icons-material/Place";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Timeline from "./Timeline";
 import BuildCircleIcon from "@mui/icons-material/BuildCircle"; 
 
@@ -45,7 +44,7 @@ const Section = ({
 );
 
 const AboutFull = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const theme = useTheme();
   const [year, setYear] = useState("2024");
 
